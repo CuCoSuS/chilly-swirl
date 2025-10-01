@@ -1,0 +1,537 @@
+/* Custom Styles for Gelato Delícia */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background:
+  radial-gradient(circle at 25% 25%, #d1d9ff 0%, #d1d9ff 25%, transparent 36%),
+  radial-gradient(circle at 75% 30%, #e3cfff 0%, #e3cfff 25%, transparent 36%),
+  radial-gradient(circle at 50% 70%, #cfd9ff 0%, #cfd9ff 25%, transparent 36%),
+  radial-gradient(circle at 80% 80%, #e8d9f9 0%, #e8d9f9 25%, transparent 36%),
+  #e9c7f0;
+
+
+
+}
+
+.navbar {
+  position: relative;
+  z-index: 1050;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 2000;
+}
+
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#sobre {
+  /* background:
+  radial-gradient(circle at 25% 25%, #d1d9ff 0%, #d1d9ff 55%, transparent 36%),
+  radial-gradient(circle at 75% 30%, #e3cfff 0%, #e3cfff 55%, transparent 36%),
+  radial-gradient(circle at 50% 70%, #cfd9ff 0%, #cfd9ff 55%, transparent 36%),
+  radial-gradient(circle at 80% 80%, #e8d9f9 0%, #e8d9f9 55%, transparent 36%),
+  #e9c7f0; */
+  /* background-color: transparent; */
+  background:
+  radial-gradient(circle at 25% 25%, #d1d9ff 0%, #d1d9ff 60%, transparent 36%),
+  radial-gradient(circle at 75% 30%, #d1d5ff 0%, #d1d8ff 60%, transparent 36%),
+  radial-gradient(circle at 50% 70%, #d1d2ff 0%, #cfd9ff 60%, transparent 36%),
+  radial-gradient(circle at 80% 80%, #d1c2f9 0%, #d1d9f9 60%, transparent 36%),
+  #d1d9ff;
+}
+
+h3 {
+text-align: center;
+}
+
+.espacamento {
+  line-height: 34px;
+  text-align: center;
+  
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+#sabores {
+  background:
+  radial-gradient(circle at 25% 25%, #d1d9ff 0%, #d1d9ff 50%, transparent 36%),
+  radial-gradient(circle at 75% 30%, #d1d5ff 0%, #d1d8ff 50%, transparent 36%),
+  radial-gradient(circle at 50% 70%, #d1d2ff 0%, #cfd9ff 50%, transparent 36%),
+  radial-gradient(circle at 80% 80%, #d1c2f9 0%, #d1d9f9 50%, transparent 36%),
+  #d1d9ff;
+}
+
+.hero-image img {
+  animation: float 3s ease-in-out infinite;
+  max-width: 350px;
+}
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1060;
+}
+
+
+
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Altura dos slides */
+/* .vh-50 {
+  height: 250vh;
+} */
+
+.carousel-item {
+  height: 500px;              /* sua altura fixa */
+  
+}
+
+.carousel-item h2 {
+  margin-top: 59px;
+  margin-bottom: 85px;  /* espaço entre h2 e p */
+}
+
+.carousel-item p {
+  margin-bottom: 70px;  /* espaço entre p e botão */
+}
+
+.carousel-item a {
+  margin-top: 10px;     /* opcional, aumenta distância do botão */
+}
+
+
+.bg-slide-1 {
+    background: url('/imgs/sorvete-escuro-1.jpg') center/cover no-repeat;
+    position: relative;
+    /* background-size: cover; */
+  }
+  .bg-slide-2 {
+    background: url('/imgs/milk-shake.jpg') center/cover no-repeat;
+    position: relative;
+  }
+  .bg-slide-3 {
+    background: url('/imgs/pote-casquinha.png') center/cover no-repeat;
+    position: relative;
+  }
+
+  /* Overlay escuro para manter o texto legível */
+  /* .bg-slide-1::before,
+  .bg-slide-2::before,
+  .bg-slide-3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+   
+  } */
+
+  /* Garante que o texto fique acima do overlay */
+  .bg-slide-1 > *,
+  .bg-slide-2 > *,
+  .bg-slide-3 > * {
+    position: relative;
+    z-index: 1;
+  }
+
+
+
+
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: #b9b4fff2 !important;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #667eea !important;
+}
+
+/* Login Modal Styles */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-header .modal-title {
+  color: white !important;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+/* User Dropdown Styles */
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dropdown-item i {
+  width: 16px;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  color: white;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #ee82e9 0%, #f3455a 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(240, 147, 251, 0.4);
+  color: white;
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Filter Buttons */
+.btn-group .btn {
+  border-radius: 20px;
+  margin: 0 5px;
+}
+
+.btn-outline-primary.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+}
+
+/* Form Styles */
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Animations */
+.flavor-card {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.flavor-card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+/* Social Links */
+.social-links a {
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: #667eea !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 100px 0 50px;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-group .btn {
+    margin: 0;
+  }
+
+  .navbar .d-flex {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Badges */
+.badge {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+/* Map Placeholder */
+.map-placeholder {
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s ease;
+  
+}
+
+.map-placeholder:hover {
+  border-color: #667eea;
+  background-color: #667eea !important;
+}
+
+/* Section Spacing */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+#gelatoCarousel .carousel-item img {
+    width: 600px; /* largura total da viewport */
+    height: 400px; /* altura total da viewport */
+    overflow: hidden;
+}
+
+/* Lightbox (caixa modal) */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Garante que fique acima de tudo */
+}
+
+.lightbox-img {
+  width: 40vw;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+#localizacao {
+  /* background: repeating-radial-gradient(
+  circle,
+  #cce7ff,
+  #cce7ff 60px,
+  #d6d0f0 61px,
+  #d6d0f0 63px
+); */
+
+
+background: repeating-radial-gradient(
+  circle,
+  #d0c2f5,
+  #d1d9ff  180px,
+  #d1d9f5 80px,
+  #e9c7f0 70px
+);
+
+
+
+
+
+
+
+
+}
+
+footer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+}
+
