@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     senha VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
- INSERT INTO usuarios (nome, email, senha) VALUES(
+INSERT INTO usuarios (nome, email, senha) VALUES(
     'nome": "João Silva',
     'email": "joao@email.com',
     'senha": "123456'
- )
+)

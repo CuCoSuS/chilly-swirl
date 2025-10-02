@@ -2,11 +2,13 @@ const express = require("express")
 const cors = require("cors")
 const session = require("express-session")
 const bcrypt = require("bcrypt")
-const { listar_usuarios, inserir_usuario, buscar_usuario_por_email } = require("./controller")
+const { listar_usuarios, inserir_usuario, buscar_usuario_por_email, criarTabelas } = require("./controller")
 
 const app = express()
 app.use(cors({ origin: "http://localhost:5000", credentials: true }))
 app.use(express.json())
+
+criarTabelas()
 
 // Configuração da sessão
 app.use(

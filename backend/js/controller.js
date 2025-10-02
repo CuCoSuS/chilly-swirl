@@ -1,5 +1,22 @@
 const { conectar, desconectar } = require('./db');
 
+async function criarTabelas() {
+    const conexao= await conectar();
+
+    let query = `
+        CREATE TABLE IF NOT EXISTS usuarios (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nome VARCHAR(100) NOT NULL,
+        email VARCHAR(100) NOT NULL UNIQUE,
+        senha VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    `;
+
+    await conexao.execute(query);
+    await desconectar(conexao)
+}
+
 // ---------------- USUÁRIOS ----------------
 async function listar_usuarios() {
     try {
@@ -62,5 +79,6 @@ module.exports = {
     listar_usuarios,
     inserir_usuario,
     buscar_usuario_por_email,
-    buscar_usuario_por_id
+    buscar_usuario_por_id,
+    criarTabelas
 };
