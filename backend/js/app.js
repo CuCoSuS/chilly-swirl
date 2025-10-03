@@ -7,7 +7,7 @@ const { listar_usuarios, inserir_usuario, buscar_usuario_por_email, criarTabelas
 const app = express();
 
 app.use(cors({ 
-  origin: "https://cucosus.github.io/", 
+  origin: "https://cucosus.github.io", 
   credentials: true 
 }));
 
