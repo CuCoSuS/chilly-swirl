@@ -168,16 +168,16 @@ text-align: center;
 
 
 .bg-slide-1 {
-    background: url('/imgs/sorvete-escuro-1.jpg') center/cover no-repeat;
+    background: url('../imgs/sorvete-escuro-1.jpg') center/cover no-repeat;
     position: relative;
     /* background-size: cover; */
   }
   .bg-slide-2 {
-    background: url('/imgs/milk-shake.jpg') center/cover no-repeat;
+    background: url('../imgs/milk-shake.jpg') center/cover no-repeat;
     position: relative;
   }
   .bg-slide-3 {
-    background: url('/imgs/pote-casquinha.png') center/cover no-repeat;
+    background: url('../imgs/pote-casquinha.png') center/cover no-repeat;
     position: relative;
   }
 
@@ -532,6 +532,8 @@ background: repeating-radial-gradient(
 
 footer {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  
+  display: flex;
+  align-items: start;
+  justify-content: center;
 }
 
