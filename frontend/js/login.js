@@ -12,7 +12,7 @@ async function inserir_usuario() {
     }
 
     try {
-        const response = await fetch("http://localhost:5000/register", { // troque o IP se necessário
+        const response = await fetch("https://chilly-swirl-production.up.railway.app/register", { // troque o IP se necessário
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(usuario)
@@ -50,7 +50,7 @@ async function buscar_usuario_por_email() {
     }
 
     try {
-        const response = await fetch("http://localhost:5000/login", { // ajuste o IP se necessário
+        const response = await fetch("https://chilly-swirl-production.up.railway.app/login", { // ajuste o IP se necessário
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(usuario)
