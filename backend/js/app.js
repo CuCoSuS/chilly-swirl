@@ -1,14 +1,19 @@
-const express = require("express")
-const cors = require("cors")
-const session = require("express-session")
-const bcrypt = require("bcrypt")
-const { listar_usuarios, inserir_usuario, buscar_usuario_por_email, criarTabelas } = require("./controller")
+const express = require("express");
+const cors = require("cors");
+const session = require("express-session");
+const bcrypt = require("bcrypt");
+const { listar_usuarios, inserir_usuario, buscar_usuario_por_email, criarTabelas } = require("./controller");
 
-const app = express()
-app.use(cors({ origin: "http://localhost:5000", credentials: true }))
-app.use(express.json())
+const app = express();
 
-criarTabelas()
+app.use(cors({ 
+  origin: "https://cucosus.github.io/", 
+  credentials: true 
+}));
+
+app.use(express.json());
+
+criarTabelas();
 
 // Configuração da sessão
 app.use(
@@ -18,7 +23,7 @@ app.use(
     saveUninitialized: false,
     cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 },
   }),
-)
+);
 
 // ---------------- ROTAS ----------------
 
